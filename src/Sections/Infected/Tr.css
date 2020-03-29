@@ -1,0 +1,12 @@
+.td{
+    margin-left: 3px;
+    border-bottom: 0.5px solid #a8a4a4;
+    text-align: center;
+}
+.alive{
+    background-color: white;
+}
+.deceased{
+    color: white;
+    background-color: rgb(80, 78, 78);
+}
