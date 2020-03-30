@@ -5,15 +5,15 @@ import "./Tr.css";
 const Tr = props => {
     
     return(
-        <tr>
-            <td className={`th td ${props.live ? "alive" : "deceased"}`}>{props.id}</td>
-            <td className={`th td ${props.live ? "alive" : "deceased"}`}>{props.first_name}</td>
-            <td className={`th td ${props.live ? "alive" : "deceased"}`}>{props.last_name}</td>
-            <td className={`th td ${props.live ? "alive" : "deceased"}`}>{props.country}</td>
-            <td className={`th td ${props.live ? "alive" : "deceased"}`}>{props.live ? "Alive" : "Deceased"}</td>
-            <td className={`th td ${props.live ? "alive" : "deceased"}`}>{props.age}</td>
-            <td className={`th td ${props.live ? "alive" : "deceased"}`}>{props.infect_date}</td>
-            <td className={`th td ${props.live ? "alive" : "deceased"}`}>{props.female ? "Female" : "Male"}</td>
+        <tr className={`${props.live ? "alive" : "deceased"}`}>
+            <td>{props.id}</td>
+            <td>{props.first_name}</td>
+            <td>{props.last_name}</td>
+            <td>{props.country}</td>
+            <td>{props.live ? "Alive" : "Deceased"}</td>
+            <td>{props.age}</td>
+            <td>{props.infect_date}</td>
+            <td>{props.female ? "Female" : "Male"}</td>
         </tr>
     )
 }

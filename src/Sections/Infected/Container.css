@@ -14,8 +14,8 @@
     background: #435d7d;
     color: white;
     padding: 15px 25px;
-    margin: -15px -20px 10px;
-    border-radius: 5px 5px 0 0;
+    margin: -20px -20px 10px;
+    border-radius: 3px;
 }
 .add-button{
     width: 50px;

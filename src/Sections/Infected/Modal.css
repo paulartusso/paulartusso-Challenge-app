@@ -1,17 +1,24 @@
 .modal-container{
     width: 400px;
-    height: 678px;
-    margin: 5px 100px;
-    position: fixed;
+    height: 680px;
+    margin: 0px 100px;
+    position: absolute;
     background-color: whitesmoke;
-    top: 33px;
     left: 420px;
     box-shadow: 0 0 6px #666;
     color: #566787;
 }
+.background-modal{
+    background-color: rgba(29, 31, 31, 0.692);
+    top: 0;
+    position: fixed;
+    height: 700px;
+    width: 100vw;
+}
+
 .modal-header{
     border-bottom: 0.5px solid #e5e5e5;
-    padding: 10px;
+    padding: 12px;
     font-size: 11px;
     display: flex;
     flex-direction: row;
@@ -19,12 +26,13 @@
 }
 .x-button{
     border:none;
+    font-size: 15px;
     color: rgb(134, 131, 131);
     background-color: whitesmoke;
     align-content: flex-end;
     position: absolute;
-    right: 30px;
-    top:30px;
+    right: 25px;
+    top: 27px;
 }
 .modal-body{
     padding: 20px;
@@ -34,8 +42,8 @@
     width: 338px;
     padding: 5px;
     border: 1px solid #ccc;
-    margin-top: 9px;
-    margin-bottom: 9px;
+    margin-top: 7px;
+    margin-bottom: 7px;
     background-color: whitesmoke;
 }
 .select{

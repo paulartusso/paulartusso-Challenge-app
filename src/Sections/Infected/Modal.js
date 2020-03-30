@@ -1,21 +1,24 @@
 import React from "react";
 import "./Modal.css";
 
-const Modal = () =>{
+
+const Modal = ({showModal, toggleShowModal}) =>{
+    if(!showModal) return null;
+
     return(
-        <div>
-        <section  className="modal-container">
+        <div className={`${showModal ? "background-modal" : null}`}>
+        <section className="modal-container">
             <header className="modal-header">
                 <h1>Add</h1>
-                <button className="x-button">x</button>
+                <button className="x-button" onClick= {toggleShowModal}>x</button>
             </header>
             <div className="modal-body">
                 <label>First Name</label>
-                <input className="modal-inputs" type="text" maxlength="50"/>
+                <input className="modal-inputs" type="text"/>
                 <label>Last Name</label>
-                <input className="modal-inputs" type="text" maxlength="50"/>
+                <input className="modal-inputs" type="text"/>
                 <label>Country</label>
-                <textarea className="modal-inputs address" type="text"  maxlength="60"></textarea>
+                <textarea className="modal-inputs address" type="text"></textarea>
                 <label>Status</label>
                 <select  className="modal-inputs select" type="text">
                     <option value="alive">Alive</option>
@@ -32,7 +35,7 @@ const Modal = () =>{
                 </select>
             </div>
             <footer className="modal-footer">
-                <button className="modal-button">Cancel</button>
+                <button className="modal-button" onClick= {toggleShowModal}>Cancel</button>
                 <button className="modal-button modal-right-button">Add</button>
             </footer>
         </section>

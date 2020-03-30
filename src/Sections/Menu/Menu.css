@@ -1,0 +1,33 @@
+.menu-container{
+    padding: 2px 0px;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    background-color: rgb(52, 58, 56);
+    position: fixed;
+    border-top-right-radius: 3px;
+}
+.menu-header{
+    background-color: rgb(27, 26, 26);
+    padding: 30px 35px;
+    margin: -3px 0px 0px;
+    color: white;
+    text-align: center;
+    border-top-right-radius: 3px;
+}
+.menu-button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-button{
+    height: 34px;
+    width: 150px;
+    padding: 5px;
+    border-radius: 2px;
+    color: black;
+    border: none;
+    background-color: #619761;
+    color: white;
+    margin-top: 35px;
+}

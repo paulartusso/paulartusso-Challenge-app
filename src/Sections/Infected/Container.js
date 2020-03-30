@@ -4,14 +4,13 @@ import "./Container.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus} from '@fortawesome/free-solid-svg-icons'
 
-const Container = () =>{
-    const [ShowModal, setShowModal] = useState(true);
+const Container = ({toggleShowModal}) =>{
     
     return(
         <section className="section-container">
             <header className="section-header">
                 <h1>Infected</h1>
-                <button className="add-button" onClick={e=>setShowModal(!ShowModal)}>
+                <button className="add-button" onClick={e=>toggleShowModal()}>
                 <FontAwesomeIcon icon={faPlus} className="header-icon"/>
                 </button>
             </header>
@@ -23,4 +22,5 @@ const Container = () =>{
 }
 
 export default Container;
+
 
