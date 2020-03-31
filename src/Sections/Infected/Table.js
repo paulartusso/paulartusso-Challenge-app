@@ -1,18 +1,8 @@
-import React, {useState, useEffect} from "react";
-import Axios from "axios";
+import React from "react";
 import Tr from "./Tr";
 import "./Table.css";
 
-const Table = () => {
-    const [data, setData] = useState([]);
-    
-    useEffect(()=> {
-        Axios.get("http://5e693ec6d426c00016b7ec9e.mockapi.io/CV1/infected")
-        .then(res => {
-            setData(res.data);
-        })
-        .catch(er => console.log(er));
-    }, []);
+const Table = ({data}) => {
 
     return(
         <table className="table">
