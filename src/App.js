@@ -1,34 +1,24 @@
-import React, {useState, useEffect} from 'react';
-import Axios from "axios";
-import Container from "./Sections/Infected/Container";
+import React from 'react';
+import {
+  BrowserRouter,
+  Switch,
+  Route
+} from 'react-router-dom';
 import Menu from "./Sections/Menu/Menu";
+import SwicthComponent from './Sections/Components/SwitchComponent';
+import Main from "./Sections/Main";
+
 
 
 function App() {
-  
-const [data, setData] = useState([]);
-    
-  useEffect(()=> {
-      let baseUrl = "http://5e693ec6d426c00016b7ec9e.mockapi.io/CV1/infected";
-      Axios.get(baseUrl)
-      .then(res => {
-          setData(res.data);
-      })
-      .catch(er => console.log(er));
-  }, []);
-  
-const [showModal, setShowModal] = useState(false);
-
-const toggleShowModal = () => setShowModal(!showModal);
 
   return (
     <div>
-      <Menu></Menu>
-      <Container toggleShowModal={toggleShowModal} 
-                 data={data} 
-                 showModal={showModal} 
-                 setData={setData}>
-      </Container> 
+      <BrowserRouter>
+        <SwicthComponent></SwicthComponent>
+        <Menu></Menu>
+        <Main></Main>
+      </BrowserRouter>
     </div>
   );
 }

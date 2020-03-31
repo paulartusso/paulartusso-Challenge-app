@@ -18,16 +18,21 @@
 .menu-button-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
-.menu-button{
-    height: 34px;
-    width: 150px;
-    padding: 5px;
-    border-radius: 2px;
-    color: black;
+.link-button{
+    background-color: rgb(52, 58, 56);
+    padding: 25px;
     border: none;
-    background-color: #619761;
-    color: white;
-    margin-top: 35px;
+    margin-top: 10px 15px;
+    text-align: left;
+    font-size: 15px;
+}
+.link{
+    color: #619761;
+    text-decoration: none;
+}
+.link-button:hover{
+    border-left: 9px solid #619761;
+    background-color: rgb(73, 82, 79);
 }

@@ -8,9 +8,9 @@ const Modal = ({showModal, toggleShowModal, data, setData}) =>{
     const [first_name, setFirst_name] = useState("");
     const [last_name, setLast_name] = useState("");
     const [country, setCountry] = useState("");
-    const [live, setLive] = useState("");
+    const [live, setLive] = useState(true);
     const [age, setAge] = useState("");
-    const [female, setFemale] = useState("");
+    const [female, setFemale] = useState(true);
 
     const addNewInfected = () =>{
         let baseUrl = "http://5e693ec6d426c00016b7ec9e.mockapi.io/CV1/infected";
