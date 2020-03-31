@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import Modal from "./Modal";
 import Table from "./Table";
 import "./Container.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus} from '@fortawesome/free-solid-svg-icons'
 
-const Container = ({toggleShowModal, showModal, data, setData, addNewInfected}) =>{
+const Container = ({toggleShowModal, showModal, data, setData}) =>{
     
     return(
         <section className="section-container">
@@ -19,8 +19,7 @@ const Container = ({toggleShowModal, showModal, data, setData, addNewInfected}) 
                 <Modal showModal={showModal} 
                        toggleShowModal={toggleShowModal} 
                        data={data} 
-                       setData={setData} 
-                       addNewInfected={addNewInfected}>
+                       setData={setData}>
                 </Modal>
                 <Table data={data}></Table>
             </section>

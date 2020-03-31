@@ -1,6 +1,6 @@
 .modal-container{
     width: 400px;
-    height: 680px;
+    height: 580px;
     margin: 0px 100px;
     position: fixed;
     background-color: whitesmoke;
@@ -20,7 +20,7 @@
 .modal-header{
     border-bottom: 0.5px solid #e5e5e5;
     padding: 10px 20px;
-    font-size: 11px;
+    font-size: 15px;
     display: flex;
     flex-direction: row;
     position: relative;
@@ -53,6 +53,7 @@
 .modal-footer{
     background-color: #ECF0F1;
     border-top: 0.5px solid #e5e5e5;
+    border-radius: 3px;
     height: 70px;
     display: flex;
     align-items: center;
@@ -73,4 +74,10 @@
     margin-right: 15px;
     color: #fff;
     border: none; 
+}
+.modal-button:hover{
+    background-color: rgb(170, 170, 170);
+}
+.modal-right-button:hover{
+    background-color: #397a39;
 }

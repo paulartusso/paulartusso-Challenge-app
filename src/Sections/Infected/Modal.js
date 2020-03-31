@@ -1,31 +1,36 @@
 import React, {useState} from "react";
+import Axios from "axios";
 import "./Modal.css";
 
 
 const Modal = ({showModal, toggleShowModal, data, setData}) =>{
 
-    
-    const [name, setName] = useState("");
-    const [lastName, setLastName] = useState("");
+    const [first_name, setFirst_name] = useState("");
+    const [last_name, setLast_name] = useState("");
     const [country, setCountry] = useState("");
-    const [status, setStatus] = useState("");
+    const [live, setLive] = useState("");
     const [age, setAge] = useState("");
-    const [infectDate, setInfectDate] = useState("");
-    const [gender, setGender] = useState("");
+    const [female, setFemale] = useState("");
 
     const addNewInfected = () =>{
+        let baseUrl = "http://5e693ec6d426c00016b7ec9e.mockapi.io/CV1/infected";
         let newInfected = {
-          name,
-          lastName,
+          first_name,
+          last_name,
           country,
-          status,
+          live,
           age,
-          infectDate,
-          gender
+          female
         }
-        setData([...data, newInfected])
-      }
-      
+        Axios.post(baseUrl, newInfected)
+        .then(res => {
+            setData([...data, res.data])
+        })
+        .catch(er => console.log(er));
+    }
+
+    console.log(setData);
+
     if(!showModal) return null;
 
     return(
@@ -37,24 +42,22 @@ const Modal = ({showModal, toggleShowModal, data, setData}) =>{
             </header>
             <div className="modal-body">
                 <label>First Name</label>
-                <input className="modal-inputs" type="text" onChange={e=>setName(e.target.value)}/>
+                <input className="modal-inputs" type="text" onChange={e=>setFirst_name(e.target.value)}/>
                 <label>Last Name</label>
-                <input className="modal-inputs" type="text" onChange={e=>setLastName(e.target.value)}/>
+                <input className="modal-inputs" type="text" onChange={e=>setLast_name(e.target.value)}/>
                 <label>Country</label>
                 <textarea className="modal-inputs address" type="text" onChange={e=>setCountry(e.target.value)}></textarea>
                 <label>Status</label>
-                <select  className="modal-inputs select" type="text" onChange={e=>setStatus(e.target.value)}>
-                    <option value="alive">Alive</option>
-                    <option value="deceased">Deceased</option>
+                <select  className="modal-inputs select" type="text" onChange={e=>setLive(e.target.value === "true" ? true : false)}>
+                    <option value="true">Alive</option>
+                    <option value="false">Deceased</option>
                 </select>
                 <label>Age</label>
                 <input className="modal-inputs" type="number" onChange={e=>setAge(e.target.value)}/>
-                <label>Infect Date</label>
-                <input className="modal-inputs" type="date" onChange={e=>setInfectDate(e.target.value)}/>
                 <label>Gender</label>
-                <select className="modal-inputs select" type="text" onChange={e=>setGender(e.target.value)}>
-                    <option value="Female">Female</option>
-                    <option value="Male">Male</option>
+                <select className="modal-inputs select" type="text" onChange={e=>setFemale(e.target.value === "true" ? true : false)}>
+                    <option value="true">Female</option>
+                    <option value="false">Male</option>
                 </select>
             </div>
             <footer className="modal-footer">

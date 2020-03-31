@@ -9,7 +9,8 @@ function App() {
 const [data, setData] = useState([]);
     
   useEffect(()=> {
-      Axios.get("http://5e693ec6d426c00016b7ec9e.mockapi.io/CV1/infected")
+      let baseUrl = "http://5e693ec6d426c00016b7ec9e.mockapi.io/CV1/infected";
+      Axios.get(baseUrl)
       .then(res => {
           setData(res.data);
       })
@@ -26,7 +27,7 @@ const toggleShowModal = () => setShowModal(!showModal);
       <Container toggleShowModal={toggleShowModal} 
                  data={data} 
                  showModal={showModal} 
-                 setdata={setData}>
+                 setData={setData}>
       </Container> 
     </div>
   );
