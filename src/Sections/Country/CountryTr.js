@@ -1,12 +1,13 @@
 import React from "react";
+import "../../TableTr.css";
 
 const CountryTr = props => {
     
     return(
         <tr>
-            <td>{props.id}</td>
-            <td>{props.name}</td>
-            <td>{props.infected}</td>
+            <td className="country-th-td">{props.id}</td>
+            <td className="country-th-td">{props.name}</td>
+            <td className="country-th-td">{props.infected}</td>
         </tr>
     )
 }

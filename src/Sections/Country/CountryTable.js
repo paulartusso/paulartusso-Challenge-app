@@ -1,17 +1,18 @@
 import React from "react";
 import CountryTr from "./CountryTr";
+import "../../TableTr.css";
 
-const CountryTable = ({Countrydata}) => {
+const CountryTable = ({CountryData}) => {
 
     return(
-        <table className="table">
+        <table className="table country-table">
             <thead>
-                    <th className="th">Id</th>
-                    <th className="th">First Name</th>
-                    <th className="th">Last Name</th>
+                    <th className="th country-th-td">Id</th>
+                    <th className="th country-th-td">First Name</th>
+                    <th className="th country-th-td">Last Name</th>
             </thead>
             <tbody>
-                {Countrydata.map(item=>{
+                {CountryData.map(item=>{
                     return(
                         <CountryTr id={item.id}  
                                     name={item.name}

@@ -1,6 +1,5 @@
 import React from "react";
-import "./Table.css";
-import "./Tr.css";
+import "../../TableTr.css";
 
 const Tr = props => {
     

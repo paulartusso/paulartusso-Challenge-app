@@ -6,6 +6,7 @@ import Container from "./Container";
 const InfectedMain = () =>{
       
     const [data, setData] = useState([]);
+    const [totalInfected, setTotalInfected] = useState(0);
         
     useEffect(()=> {
         let baseUrl = "http://5e693ec6d426c00016b7ec9e.mockapi.io/CV1/infected";
@@ -13,8 +14,11 @@ const InfectedMain = () =>{
         .then(res => {
             setData(res.data);
         })
+        .then(() => setTotalInfected(data.length))
         .catch(er => console.log(er));
     }, []);
+
+    useEffect(()=> setTotalInfected(data.length), [data]);
 
     const [showModal, setShowModal] = useState(false);
 
@@ -25,7 +29,8 @@ const InfectedMain = () =>{
             <Container toggleShowModal={toggleShowModal} 
                     data={data} 
                     showModal={showModal} 
-                    setData={setData}>
+                    setData={setData}
+                    totalInfected={totalInfected}>
             </Container>     
         </div>
     );

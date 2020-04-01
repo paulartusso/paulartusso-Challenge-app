@@ -11,7 +11,7 @@ const Menu = () =>{
                 <Link to="/InfectedMain" className="link">Infected</Link>
                 </button>
                 <button className="link-button">
-                <Link to="/CountryContainer" className="link">Countries</Link>
+                <Link to="/CountryMain" className="link">Countries</Link>
                 </button>
             </section>
         </section>

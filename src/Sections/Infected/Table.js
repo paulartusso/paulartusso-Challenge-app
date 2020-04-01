@@ -1,6 +1,6 @@
 import React from "react";
 import Tr from "./Tr";
-import "./Table.css";
+import "../../TableTr.css";
 
 const Table = ({data}) => {
 

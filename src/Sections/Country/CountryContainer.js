@@ -1,11 +1,12 @@
 import React from "react";
 import CountryTable from "./CountryTable";
+import "./CountryContainer.css";
 
 
 const CountryContainer = ({CountryData, setCountryData}) =>{
     return(
-        <section className="section-container">
-            <header className="section-header">
+        <section className="section-country-container">
+            <header className="section-country-header">
                 <h1>Affected Countries</h1>
             </header>
             <section>
