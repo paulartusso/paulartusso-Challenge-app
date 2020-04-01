@@ -25,6 +25,7 @@ const Modal = ({showModal, toggleShowModal, data, setData}) =>{
         Axios.post(baseUrl, newInfected)
         .then(res => {
             setData([...data, res.data])
+        .then(toggleShowModal())
         })
         .catch(er => console.log(er));
     }

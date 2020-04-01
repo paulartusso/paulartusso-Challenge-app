@@ -1,13 +1,9 @@
 import React from 'react';
 import {
-  BrowserRouter,
-  Switch,
-  Route
+  BrowserRouter
 } from 'react-router-dom';
 import Menu from "./Sections/Menu/Menu";
-import SwicthComponent from './Sections/Components/SwitchComponent';
-import Main from "./Sections/Main";
-
+import SwitchComponent from './Sections/Components/SwitchComponent';
 
 
 function App() {
@@ -15,10 +11,10 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <SwicthComponent></SwicthComponent>
+        <SwitchComponent></SwitchComponent>
         <Menu></Menu>
-        <Main></Main>
       </BrowserRouter>
+      
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import Axios from "axios";
-import Container from "./Infected/Container";
-import CountryContainer from "./Country/CountryContainer";
+import Container from "./Container";
 
-const Main = () =>{
+
+const InfectedMain = () =>{
       
     const [data, setData] = useState([]);
         
@@ -26,11 +26,10 @@ const Main = () =>{
                     data={data} 
                     showModal={showModal} 
                     setData={setData}>
-            </Container> 
-            <CountryContainer></CountryContainer>
+            </Container>     
         </div>
     );
 }
 
 
-export default Main;
+export default InfectedMain;

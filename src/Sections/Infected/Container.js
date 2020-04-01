@@ -11,6 +11,7 @@ const Container = ({toggleShowModal, showModal, data, setData}) =>{
         <section className="section-container">
             <header className="section-header">
                 <h1>Infected</h1>
+                
                 <button className="add-button" onClick={e=>toggleShowModal()}>
                     <FontAwesomeIcon icon={faPlus} className="header-icon"/>
                 </button>
