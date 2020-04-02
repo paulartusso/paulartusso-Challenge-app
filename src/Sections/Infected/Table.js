@@ -7,14 +7,14 @@ const Table = ({data}) => {
     return(
         <table className="table">
             <thead>
-                    <th className="th">Id</th>
-                    <th className="th">First Name</th>
-                    <th className="th">Last Name</th>
-                    <th className="th">Country</th>
-                    <th className="th">Status</th>
-                    <th className="th">Age</th>
-                    <th className="th">Infect Date</th>
-                    <th className="th">Gender</th>
+                <th className="th">Id</th>
+                <th className="th">First Name</th>
+                <th className="th">Last Name</th>
+                <th className="th">Country</th>
+                <th className="th">Status</th>
+                <th className="th">Age</th>
+                <th className="th">Infect Date</th>
+                <th className="th">Gender</th>
             </thead>
             <tbody>
                 {data.map(item=>{

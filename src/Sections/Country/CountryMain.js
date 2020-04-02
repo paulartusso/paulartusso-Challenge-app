@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Axios from "axios";
 import CountryContainer from "./CountryContainer";
-import Bars from "./Bars";
 
 
 const CountryMain = () =>{
@@ -20,10 +19,9 @@ const CountryMain = () =>{
     return(
         <div>
             <CountryContainer 
-                    CountryData={CountryData} 
-                    setCountryData={setCountryData}>
+                CountryData={CountryData} 
+                setCountryData={setCountryData}>
             </CountryContainer>   
-            <Bars CountryData={CountryData}></Bars>
         </div>
     );
 }

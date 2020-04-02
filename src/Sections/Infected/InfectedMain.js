@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import Axios from "axios";
 import Container from "./Container";
 
-
 const InfectedMain = () =>{
       
     const [data, setData] = useState([]);
@@ -33,13 +32,14 @@ const InfectedMain = () =>{
 
     return(
         <div>
-            <Container toggleShowModal={toggleShowModal} 
-                    data={data} 
-                    showModal={showModal} 
-                    setData={setData}
-                    totalInfected={totalInfected}
-                    orderByAge={orderByAge}>
-            </Container>     
+            <Container 
+                toggleShowModal={toggleShowModal} 
+                data={data} 
+                showModal={showModal} 
+                setData={setData}
+                totalInfected={totalInfected}
+                orderByAge={orderByAge}>
+            </Container>   
         </div>
     );
 }

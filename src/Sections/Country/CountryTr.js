@@ -2,7 +2,6 @@ import React from "react";
 import "../../TableTr.css";
 
 const CountryTr = props => {
-    
     return(
         <tr>
             <td className="country-th-td">{props.id}</td>
