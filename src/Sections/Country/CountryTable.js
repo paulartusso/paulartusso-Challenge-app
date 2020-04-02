@@ -8,8 +8,8 @@ const CountryTable = ({CountryData}) => {
         <table className="table country-table">
             <thead>
                     <th className="th country-th-td">Id</th>
-                    <th className="th country-th-td">First Name</th>
-                    <th className="th country-th-td">Last Name</th>
+                    <th className="th country-th-td">Country</th>
+                    <th className="th country-th-td">Infected</th>
             </thead>
             <tbody>
                 {CountryData.map(item=>{

@@ -5,7 +5,7 @@ import "./Container.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus} from '@fortawesome/free-solid-svg-icons'
 
-const Container = ({toggleShowModal, showModal, data, setData, totalInfected, orderByAge}) =>{
+const Container = ({orderByAge, toggleShowModal, showModal, data, setData, totalInfected}) =>{
     
     return(
         <section className="section-container">
@@ -16,8 +16,8 @@ const Container = ({toggleShowModal, showModal, data, setData, totalInfected, or
                     <FontAwesomeIcon icon={faPlus} className="header-icon"/>
                 </button>
             </header>
-                <button onClick={e=>orderByAge()}>Order</button>
             <section>
+                <button className="order-button" onClick={e=>orderByAge()}>Order Infected by Age</button>
                 <Modal showModal={showModal} 
                        toggleShowModal={toggleShowModal} 
                        data={data} 

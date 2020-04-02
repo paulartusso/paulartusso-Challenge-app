@@ -25,10 +25,10 @@ const InfectedMain = () =>{
     const toggleShowModal = () => setShowModal(!showModal);
 
     const orderByAge = () =>{
-        data.sort((a, b) => {
+        setData([...data.sort((a, b) => {
             return a.age - b.age
-        });
-        setData(data.sort(data.age));
+        })]);
+        
     };
 
     return(
