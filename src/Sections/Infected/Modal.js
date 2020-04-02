@@ -26,6 +26,7 @@ const Modal = ({showModal, toggleShowModal, data, setData}) =>{
         .then(res => {
             setData([...data, res.data]);
         })
+        .then(()=>toggleShowModal())
         .catch(er => console.log(er));
     }
 

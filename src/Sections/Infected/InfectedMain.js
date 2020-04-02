@@ -24,13 +24,21 @@ const InfectedMain = () =>{
 
     const toggleShowModal = () => setShowModal(!showModal);
 
+    const orderByAge = () =>{
+        data.sort((a, b) => {
+            return a.age - b.age
+        });
+        setData(data.sort(data.age));
+    };
+
     return(
         <div>
             <Container toggleShowModal={toggleShowModal} 
                     data={data} 
                     showModal={showModal} 
                     setData={setData}
-                    totalInfected={totalInfected}>
+                    totalInfected={totalInfected}
+                    orderByAge={orderByAge}>
             </Container>     
         </div>
     );

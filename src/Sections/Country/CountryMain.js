@@ -23,7 +23,7 @@ const CountryMain = () =>{
                     CountryData={CountryData} 
                     setCountryData={setCountryData}>
             </CountryContainer>   
-        
+            <Bars CountryData={CountryData}></Bars>
         </div>
     );
 }

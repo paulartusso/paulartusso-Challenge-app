@@ -5,39 +5,51 @@ const Bars = ({CountryData}) =>{
     
     const [graphData, setGraphData] = useState({
         series: [{
-              data: [1, 2, 3, 4, 5]
-            }],
+              name: 'Infected Per Country',
+              data: []
+        }],
         options: {
-          chart: {
-            type: 'bar',
-            height: 350
-          },
-          plotOptions: {
+            plotOptions: {
             bar: {
               horizontal: true,
+              barHeight: "100%"
             }
           },
-          dataLabels: {
-            enabled: false
-          },
-          xaxis: {
-            categories: ["China", "italia", "Argentina", "Ireland", "Saint Barthelemy"],
-          }
-        },
+          
+        }
     });
     
     
     useEffect(()=>{
-        let graphics = {...graphData};
+        let seriesData = [];
+        let categories = [];
+        for(let country of CountryData){
+           seriesData.push(country.infected);
+           categories.push(country.name);
+        }
+        setGraphData({
+          series: [{
+            data: seriesData
+          }],
+          options: {
+            ...graphData.options,
+            xaxis: {
+              ...graphData.options.xaxis,
+              categories
+            }
+          }
         
-        
-        setGraphData(graphics);
-        
+        });
         }, [CountryData]);
       
     return (
-        <div>
-            <ReactApexChart graphData={graphData} CountryData={CountryData}/>
+        <div style={{marginLeft: '200px'}}>
+            <ReactApexChart
+              series={graphData.series}
+              options={graphData.options}
+              type="bar"
+              width={500}
+              height={320} />
         </div>
     )
 }
