@@ -8,10 +8,10 @@ const Menu = () =>{
             <header className="menu-header"></header>
             <section className="menu-button-container">
                 <button className="link-button">
-                <Link to="/InfectedMain" className="link">Infected</Link>
+                    <Link to="/InfectedMain" className="link">Infected</Link>
                 </button>
                 <button className="link-button">
-                <Link to="/CountryMain" className="link">Countries</Link>
+                    <Link to="/CountryMain" className="link">Countries</Link>
                 </button>
             </section>
         </section>

@@ -12,7 +12,7 @@ const Modal = ({showModal, toggleShowModal, data, setData}) =>{
     const [age, setAge] = useState("");
     const [female, setFemale] = useState(true);
 
-    const addNewInfected = (toggleShowModal) =>{
+    const addNewInfected = () =>{
         let baseUrl = "http://5e693ec6d426c00016b7ec9e.mockapi.io/CV1/infected";
         let newInfected = {
           first_name,
@@ -24,8 +24,7 @@ const Modal = ({showModal, toggleShowModal, data, setData}) =>{
         }
         Axios.post(baseUrl, newInfected)
         .then(res => {
-            setData([...data, res.data])
-        .then(() => toggleShowModal)
+            setData([...data, res.data]);
         })
         .catch(er => console.log(er));
     }
@@ -62,7 +61,7 @@ const Modal = ({showModal, toggleShowModal, data, setData}) =>{
                 </select>
             </div>
             <footer className="modal-footer">
-                <button className="modal-button" onClick= {toggleShowModal}>Cancel</button>
+                <button className="modal-button" onClick= {toggleShowModal}>Close</button>
                 <button className="modal-button modal-right-button" onClick={addNewInfected}>Add</button>
             </footer>
         </section>

@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom';
 import Menu from "./Sections/Menu/Menu";
 import SwitchComponent from './Sections/Components/SwitchComponent';
-
+import "./App.css";
 
 function App() {
 
@@ -14,7 +14,6 @@ function App() {
         <SwitchComponent></SwitchComponent>
         <Menu></Menu>
       </BrowserRouter>
-      
     </div>
   );
 }
