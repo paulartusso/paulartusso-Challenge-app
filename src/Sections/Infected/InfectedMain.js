@@ -17,7 +17,7 @@ const InfectedMain = () =>{
         .catch(er => console.log(er));
     }, []);
 
-    useEffect(()=> setTotalInfected(data.length), [data]);
+    useEffect(()=> setTotalInfected(data.length), [data.length]);
 
     const [showModal, setShowModal] = useState(false);
 
