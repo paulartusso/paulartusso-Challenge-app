@@ -8,7 +8,7 @@ const CountryMain = () =>{
     const [CountryData, setCountryData] = useState([]);
         
     useEffect(()=> {
-        let baseUrl = "http://5e693ec6d426c00016b7ec9e.mockapi.io/CV1/countries";
+        let baseUrl = "https://5e693ec6d426c00016b7ec9e.mockapi.io/CV1/countries";
         Axios.get(baseUrl)
         .then(res => {
             setCountryData(res.data);

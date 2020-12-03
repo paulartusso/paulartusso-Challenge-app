@@ -13,7 +13,7 @@ const Modal = ({showModal, toggleShowModal, data, setData}) =>{
     const [female, setFemale] = useState(true);
 
     const addNewInfected = () =>{
-        let baseUrl = "http://5e693ec6d426c00016b7ec9e.mockapi.io/CV1/infected";
+        let baseUrl = "https://5e693ec6d426c00016b7ec9e.mockapi.io/CV1/infected";
         let newInfected = {
           first_name,
           last_name,

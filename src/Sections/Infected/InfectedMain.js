@@ -8,7 +8,7 @@ const InfectedMain = () =>{
     const [totalInfected, setTotalInfected] = useState(0);
         
     useEffect(()=> {
-        let baseUrl = "http://5e693ec6d426c00016b7ec9e.mockapi.io/CV1/infected";
+        let baseUrl = "https://5e693ec6d426c00016b7ec9e.mockapi.io/CV1/infected";
         Axios.get(baseUrl)
         .then(res => {
             setData(res.data);
