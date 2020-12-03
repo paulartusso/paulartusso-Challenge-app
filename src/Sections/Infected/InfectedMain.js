@@ -13,7 +13,6 @@ const InfectedMain = () =>{
         .then(res => {
             setData(res.data);
         })
-        .then(() => setTotalInfected(data.length))
         .catch(er => console.log(er));
     }, []);
 
